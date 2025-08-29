@@ -63,8 +63,6 @@ with col1:
 st.write('Read more about Gezira Irrigation Scheme below in English or Arabic')
 
 
-
-
 if st.session_state.get("language", "Arabic") == "English":
     	  support_arabic_text(all=False)
     	  text = english_txt
@@ -74,8 +72,7 @@ else:
 
 st.markdown(text, unsafe_allow_html=True)
 
-Gezira_scheme_image = "https://github.com/HanaAltom/Gezira_IPA_Team/blob/main/data/Gezira_Scheme.png"
-response = requests.get(Gezira_scheme_image)
+
 
 with col2:
 	
@@ -83,13 +80,15 @@ with col2:
 	st.write('')
 	st.write('')
 	
-
-if response.status_code == 200:
-	img = Image.open(BytesIO(response.content))
-    st.image(img, caption="Gezira Scheme Divisions", use_container_width=True)
-else:
-	st.error("Could not fetch image")	
+	Gezira_scheme_image = "https://github.com/HanaAltom/Gezira_IPA_Team/blob/main/data/Gezira_Scheme.png"
+	response = requests.get(Gezira_scheme_image)
+	if response.status_code == 200:
+		img = Image.open(BytesIO(response.content))
+    	st.image(img, caption="Gezira Scheme Divisions", use_container_width=True)
+	else:
+		st.error("Could not fetch image")	
 	
+
 
 
 
