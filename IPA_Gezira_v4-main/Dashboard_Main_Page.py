@@ -84,11 +84,12 @@ with col2:
 	response = requests.get(Gezira_scheme_image)
 
 	if response.status_code == 200:
-    img = Image.open(BytesIO(response.content))
-    st.image(img, caption="Image from URL", use_container_width=True)
+    	img = Image.open(BytesIO(response.content))
+    	st.image(img, caption="Gezira Scheme Divisions", use_container_width=True)
 	else:
-    st.error("Could not fetch image")	
-	st.image(Gezira_scheme_image, caption="Gezira Scheme Divisions", width=400)
+   		st.error("Could not fetch image")	
+	
+
 
 
 
