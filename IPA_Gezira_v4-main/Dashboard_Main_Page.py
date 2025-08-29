@@ -79,7 +79,7 @@ with col2:
     st.write('')
     st.write('')
 
-    Gezira_scheme_image = "https://raw.githubusercontent.com/HanaAltom/Gezira_IPA_Team/main/data/Gezira_Scheme.png"
+    Gezira_scheme_image = "https://github.com/HanaAltom/Gezira_IPA_Team/blob/main/data/Gezira_Scheme.png"
     response = requests.get(Gezira_scheme_image)
 
     if response.status_code == 200:
@@ -88,6 +88,7 @@ with col2:
     else:
         st.error("Could not fetch image")	
 	
+
 
 
 
