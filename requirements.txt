@@ -13,7 +13,7 @@ geopandas
 Pillow
 matplotlib
 pillow
-BytesIO
 Image
 Point
+
 
