@@ -4,7 +4,7 @@ from streamlit_folium import st_folium
 from shapely.geometry import Point
 from arabic_support import support_arabic_text
 from util.gezira_info_txt import arabic_txt, english_txt
-from io import BytesIO
+import io
 import requests
 from PIL import Image
 
@@ -86,11 +86,12 @@ with col2:
     response = requests.get(Gezira_scheme_image)
 
     if response.status_code == 200:
-        img = Image.open(BytesIO(response.content))
+        img = Image.open(io.BytesIO(response.content))
         st.image(img, caption="Gezira Scheme Divisions", use_container_width=True)
     else:
         st.error("Could not fetch image")	
 	
+
 
 
 
