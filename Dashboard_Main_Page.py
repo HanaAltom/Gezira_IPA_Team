@@ -20,6 +20,7 @@ logo_small, logo_wide = cm.logos()
 gdf = cm.get_gdf_from_json(geo)
 ipa_ds_path = r"data/Gezira_ipa_results.nc"
 shapefile_path = r"data/Gezira_IR.json"
+url = 'https://github.com/HanaAltom/Gezira_IPA_Team/blob/main/data/Gezira_Scheme.png'
 
 # Sidebar
 with st.sidebar:
@@ -81,7 +82,8 @@ with col2:
 	st.write('')
 	st.write('')
 		
-	st.image(https://github.com/HanaAltom/Gezira_IPA_Team/blob/main/data/Gezira_Scheme.png, caption="Gezira Scheme Divisions", width=400)
+	st.image(url, caption="Gezira Scheme Divisions", width=400)
+
 
 
 
