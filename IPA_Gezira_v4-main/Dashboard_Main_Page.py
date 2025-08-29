@@ -4,7 +4,7 @@ from streamlit_folium import st_folium
 from shapely.geometry import Point
 from arabic_support import support_arabic_text
 from util.gezira_info_txt import arabic_txt, english_txt
-
+from io import BytesIO
 import requests
 from PIL import Image
 
@@ -91,6 +91,7 @@ with col2:
     else:
         st.error("Could not fetch image")	
 	
+
 
 
 
