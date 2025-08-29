@@ -74,14 +74,15 @@ else:
 
 st.markdown(text, unsafe_allow_html=True)
 
+Gezira_scheme_image = "https://github.com/HanaAltom/Gezira_IPA_Team/blob/main/data/Gezira_Scheme.png"
+response = requests.get(Gezira_scheme_image)
 
 with col2:
 	
 	st.write ('')
 	st.write('')
 	st.write('')
-	Gezira_scheme_image = "https://github.com/HanaAltom/Gezira_IPA_Team/blob/main/data/Gezira_Scheme.png"
-	response = requests.get(Gezira_scheme_image)
+	
 
 	if response.status_code == 200:
     	img = Image.open(BytesIO(response.content))
@@ -89,6 +90,7 @@ with col2:
 	else:
    		st.error("Could not fetch image")	
 	
+
 
 
 
