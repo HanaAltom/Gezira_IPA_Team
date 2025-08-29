@@ -84,12 +84,13 @@ with col2:
 	st.write('')
 	
 
-	if response.status_code == 200:
-    	img = Image.open(BytesIO(response.content))
-    	st.image(img, caption="Gezira Scheme Divisions", use_container_width=True)
-	else:
-   		st.error("Could not fetch image")	
+if response.status_code == 200:
+	img = Image.open(BytesIO(response.content))
+    st.image(img, caption="Gezira Scheme Divisions", use_container_width=True)
+else:
+	st.error("Could not fetch image")	
 	
+
 
 
 
