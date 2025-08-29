@@ -12,3 +12,6 @@ plotly
 geopandas
 Pillow
 matplotlib
+BytesIO
+Image
+Point
